@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import java.util.List;
 
 public class DiscountService {
@@ -7,5 +9,9 @@ public class DiscountService {
 
     void saveAll(List<String> users) {
         System.out.println(users);
+    }
+
+    void printAll(Scanner scanner) {
+        System.out.println(scanner);
     }
 }
