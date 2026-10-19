@@ -11,7 +11,12 @@ public class DiscountService {
         System.out.println(users);
     }
 
-    void printAll(Scanner scanner) {
-        System.out.println(scanner);
+    void soutAll(Scanner scanner) {
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.print("Enter name");
+    }
+
+    void balanceView(int balance) {
+        System.out.println(balance);
     }
 }
