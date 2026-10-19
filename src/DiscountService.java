@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import java.util.List;
@@ -11,7 +13,13 @@ public class DiscountService {
         System.out.println(users);
     }
 
-    void printAll(Scanner scanner) {
-        System.out.println(scanner);
+    void showAllAge(Scanner scanner) throws FileNotFoundException {
+        Scanner scanner1 = new Scanner(new File("file.txt"));
+    }
+
+    void saveBalance(List<String> balance) {
+        for (String x : balance) {
+            System.out.println(x);
+        }
     }
 }
