@@ -22,4 +22,9 @@ public class DiscountService {
             System.out.println(x);
         }
     }
+    void soutAll(Scanner scanner) {
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.print("Enter name");
+    }
+
 }
