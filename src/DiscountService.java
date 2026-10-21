@@ -17,7 +17,7 @@ public class DiscountService {
         Scanner scanner1 = new Scanner(new File("file.txt"));
     }
 
-    void saveBalance(List<String> balance) {
+    void Balance(List<String> balance) {
         for (String x : balance) {
             System.out.println(x);
         }
@@ -25,6 +25,10 @@ public class DiscountService {
     void soutAll(Scanner scanner) {
         Scanner scanner1 = new Scanner(System.in);
         System.out.print("Enter name");
+    }
+
+    void hobbyView(Person person) {
+        System.out.println(person.getHobby());
     }
 
 }
