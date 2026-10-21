@@ -33,6 +33,7 @@ public class DiscountService {
 
     void birthdayView(Person person) {
         System.out.println(person.getBirthday());
+        hobbyView(person);
     }
 
 }
