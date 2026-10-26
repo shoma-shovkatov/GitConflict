@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 
 public class Person {
+    private int id;
     private String name;
     private String surname;
     private int age;
@@ -9,13 +10,18 @@ public class Person {
     private String hobby;
 
 
-    public Person(String name, String surname, int age, int balance, LocalDate birthday, String hobby) {
+    public Person(int id, String name, String surname, int age, int balance, LocalDate birthday, String hobby) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.balance = balance;
         this.birthday = birthday;
         this.hobby = hobby;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
