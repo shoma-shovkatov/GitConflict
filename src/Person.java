@@ -47,4 +47,17 @@ public class Person {
     public LocalDate getBirthday() {
         return birthday;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", balance=" + balance +
+                ", birthday=" + birthday +
+                ", hobby='" + hobby + '\'' +
+                '}';
+    }
 }
