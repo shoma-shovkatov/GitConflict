@@ -32,5 +32,17 @@ public class PersonRepositoryImpl implements PersonRepository {
         return person;
     }
 
+    @Override
+    public int personsTotalBalance() throws Exception {
+        int totalBalance=0;
+        for (Person p : personList) {
+            totalBalance = p.getBalance() + totalBalance;
+        }
+        if (totalBalance == 0) {
+            throw new Exception("Total Balance is 0");
+        }
+        return totalBalance;
+    }
+
 
 }
