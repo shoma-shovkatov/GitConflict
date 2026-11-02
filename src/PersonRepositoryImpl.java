@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class PersonRepositoryImpl implements PersonRepository {
@@ -42,6 +43,20 @@ public class PersonRepositoryImpl implements PersonRepository {
             throw new Exception("Total Balance is 0");
         }
         return totalBalance;
+    }
+
+
+    /**
+     * согл доку-ции мы находим гол рождения по параметру год и используя стрим апи собираем в лист
+     * @param year
+     * @return
+     */
+    @Override
+    public List<Person> findByDate(int year) {
+        List<Person> list = personList.stream()
+                .filter(e -> e.getBirthday().getYear() == year)
+                .toList();
+        return list;
     }
 
 

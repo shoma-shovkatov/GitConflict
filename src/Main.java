@@ -21,5 +21,9 @@ public class Main {
         int totalBalance = personRepository.personsTotalBalance();
         System.out.println(totalBalance);
 
+        PersonRepository personRepository2 = new PersonRepositoryImpl(personList);
+        List<Person> list = personRepository2.findByDate(2026);
+        System.out.println(list);
+
     }
 }
