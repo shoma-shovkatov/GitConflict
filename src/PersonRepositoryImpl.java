@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class PersonRepositoryImpl implements PersonRepository {
@@ -42,6 +43,17 @@ public class PersonRepositoryImpl implements PersonRepository {
             throw new Exception("Total Balance is 0");
         }
         return totalBalance;
+    }
+
+    @Override
+    public List<Person> findByDate(int year) {
+        List<Person> personList1 = new ArrayList<>();
+        for (Person p : personList) {
+            if (p.getBirthday().getYear() == year) {
+                personList1.add(p);
+            }
+        }
+        return personList1;
     }
 
 
