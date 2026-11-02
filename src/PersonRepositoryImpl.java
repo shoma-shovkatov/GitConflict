@@ -47,13 +47,10 @@ public class PersonRepositoryImpl implements PersonRepository {
 
     @Override
     public List<Person> findByDate(int year) {
-        List<Person> personList1 = new ArrayList<>();
-        for (Person p : personList) {
-            if (p.getBirthday().getYear() == year) {
-                personList1.add(p);
-            }
-        }
-        return personList1;
+        List<Person> list = personList.stream()
+                .filter(e -> e.getBirthday().getYear() == year)
+                .toList();
+        return list;
     }
 
 
