@@ -59,5 +59,12 @@ public class PersonRepositoryImpl implements PersonRepository {
         return list;
     }
 
+    @Override
+    public long getAmountWithNegativeBalance() {
+        return personList.stream()
+                .filter(e -> e.getBalance() < 0)
+                .count();
+    }
+
 
 }
