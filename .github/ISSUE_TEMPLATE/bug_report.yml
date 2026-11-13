@@ -1,0 +1,77 @@
+name: Сообщить об ошибке (Bug Report)
+description: Интерактивная форма для описания найденной ошибки
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за помощь в улучшении проекта! Пожалуйста, заполните форму ниже.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Что произошло?
+      description: Четко и кратко опишите суть ошибки.
+      placeholder: При нажатии на кнопку «Сохранить» страница зависает...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      description: Как нам повторить эту проблему?
+      value: |
+        1. Перейти на '...'
+        2. Нажать на '...'
+        3. Увидеть ошибку
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Операционная система
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: В каких браузерах наблюдается проблема?
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Яндекс Браузер
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия приложения или ветки
+      description: Укажите номер версии, если знаете.
+      placeholder: например, v1.4.2
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи или вывод консоли
+      description: Вставьте текст ошибки, он автоматически отформатируется как код.
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Подтверждение
+      options:
+        - label: Я проверил(а), что такой задачи еще нет в списке открытых Issues
+          required: true
