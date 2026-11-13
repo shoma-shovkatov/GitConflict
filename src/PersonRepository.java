@@ -8,4 +8,6 @@ public interface PersonRepository {
     int personsTotalBalance() throws Exception;
 
     List<Person> findByDate(int year);
+
+    long getAmountWithNegativeBalance();
 }
