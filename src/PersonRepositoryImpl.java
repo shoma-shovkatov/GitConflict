@@ -67,6 +67,10 @@ public class PersonRepositoryImpl implements PersonRepository {
                 .count();
     }
 
+    /**
+     * Find min
+     * @return
+     */
     @Override
     public Person findMin() {
         return personList.stream()
