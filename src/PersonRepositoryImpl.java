@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class PersonRepositoryImpl implements PersonRepository {
@@ -64,6 +65,17 @@ public class PersonRepositoryImpl implements PersonRepository {
         return personList.stream()
                 .filter(e -> e.getBalance() < 0)
                 .count();
+    }
+
+    /**
+     * Find min
+     * @return
+     */
+    @Override
+    public Person findMin() {
+        return personList.stream()
+                .min(Comparator.comparing(e -> e.getBalance()))
+                .orElseThrow(() -> new IllegalArgumentException("Person list is empty"));
     }
 
 
