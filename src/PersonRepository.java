@@ -10,4 +10,6 @@ public interface PersonRepository {
     List<Person> findByDate(int year);
 
     long getAmountWithNegativeBalance();
+
+    Person findMin();
 }
