@@ -1,0 +1,42 @@
+name: Предложить улучшение (Feature Request)
+description: Предложите новую идею или доработку функционала
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: К чему относится предложение?
+      options:
+        - Пользовательский интерфейс (UI/UX)
+        - Производительность
+        - Новая функциональность
+        - Документация
+        - Другое
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему это решает?
+      description: Опишите неудобство, с которым вы столкнулись.
+      placeholder: Сейчас неудобно делать X, потому что...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Как это должно работать?
+      description: Опишите желаемый результат.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: Участие в разработке
+      options:
+        - label: Я готов(а) самостоятельно реализовать эту задачу и отправить Pull Request
+          required: false
