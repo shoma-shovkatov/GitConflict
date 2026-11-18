@@ -78,5 +78,10 @@ public class PersonRepositoryImpl implements PersonRepository {
                 .orElseThrow(() -> new IllegalArgumentException("Person list is empty"));
     }
 
+    @Override
+    public void hello() {
+        System.out.println("hello from dev a");
+    }
+
 
 }
