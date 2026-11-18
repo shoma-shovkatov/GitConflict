@@ -12,4 +12,6 @@ public interface PersonRepository {
     long getAmountWithNegativeBalance();
 
     Person findMin();
+
+    void hello();
 }
