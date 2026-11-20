@@ -67,7 +67,7 @@ public class PersonRepositoryImpl implements PersonRepository {
                 .count();
     }
 
-    /**
+    /**.
      * Find min
      * @return
      */
@@ -76,6 +76,11 @@ public class PersonRepositoryImpl implements PersonRepository {
         return personList.stream()
                 .min(Comparator.comparing(e -> e.getBalance()))
                 .orElseThrow(() -> new IllegalArgumentException("Person list is empty"));
+    }
+
+    @Override
+    public void buy() {
+        System.out.println("Byu from dev B");
     }
 
 
