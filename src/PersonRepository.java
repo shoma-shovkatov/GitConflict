@@ -13,5 +13,5 @@ public interface PersonRepository {
 
     Person findMin();
 
-    void hello();
+    void buy();
 }

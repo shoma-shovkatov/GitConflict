@@ -67,7 +67,7 @@ public class PersonRepositoryImpl implements PersonRepository {
                 .count();
     }
 
-    /**
+    /**.
      * Find min
      * @return
      */
@@ -79,8 +79,8 @@ public class PersonRepositoryImpl implements PersonRepository {
     }
 
     @Override
-    public void hello() {
-        System.out.println("hello from dev a");
+    public void buy() {
+        System.out.println("Byu from dev B");
     }
 
 
