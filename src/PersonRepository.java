@@ -17,4 +17,6 @@ public interface PersonRepository {
 
 
     void showPersonHobby(Person id);
+
+    void shoma();
 }

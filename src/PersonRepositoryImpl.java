@@ -88,5 +88,10 @@ public class PersonRepositoryImpl implements PersonRepository {
         System.out.println("Hobby:");
     }
 
+    @Override
+    public void shoma() {
+        System.out.println("shoma hello");
+    }
+
 
 }
