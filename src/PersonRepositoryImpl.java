@@ -83,5 +83,10 @@ public class PersonRepositoryImpl implements PersonRepository {
         System.out.println("Byu from dev B");
     }
 
+    @Override
+    public void showPersonHobby(Person id) {
+        System.out.println("Hobby:");
+    }
+
 
 }
