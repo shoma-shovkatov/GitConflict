@@ -9,6 +9,9 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public Product findById(int id) {
-        return null;
+        return productList.stream()
+                .filter(e -> e.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException());
     }
 }
