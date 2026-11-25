@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 public class ProductRepositoryImpl implements ProductRepository{
@@ -16,14 +17,8 @@ public class ProductRepositoryImpl implements ProductRepository{
     }
     @Override
     public Product findMax() {
-        Product maxProduct = null;
-        int maxPrice = 0;
-        for (Product p : productList) {
-            if (p.getPrice() > maxPrice) {
-                maxProduct = p;
-                maxPrice = p.getPrice();
-            }
-        }
-        return maxProduct;
+        return productList.stream()
+                .max(Comparator.comparing(e -> e.getPrice()))
+                .orElseThrow(() -> new IllegalMonitorStateException("Can not find max product"))
     }
 }
