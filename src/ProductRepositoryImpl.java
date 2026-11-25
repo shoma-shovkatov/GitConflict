@@ -26,4 +26,10 @@ public class ProductRepositoryImpl implements ProductRepository{
                 .max(Comparator.comparing(e -> e.getPrice()))
                 .orElseThrow(() -> new IllegalMonitorStateException("Can not find max product"))
     }
+    @Override
+    public Product findMin() {
+        return productList.stream()
+                .min(Comparator.comparing(e -> e.getPrice()))
+                .orElseThrow(() -> new IllegalStateException("Cannot find min"));
+    }
 }
