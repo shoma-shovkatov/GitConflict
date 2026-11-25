@@ -15,6 +15,11 @@ public class ProductRepositoryImpl implements ProductRepository{
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException());
     }
+
+    /**
+     * Find max product
+     * @return max product of the Product class.
+     */
     @Override
     public Product findMax() {
         return productList.stream()
