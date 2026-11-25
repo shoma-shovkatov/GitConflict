@@ -14,4 +14,16 @@ public class ProductRepositoryImpl implements ProductRepository{
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException());
     }
+    @Override
+    public Product findMax() {
+        Product maxProduct = null;
+        int maxPrice = 0;
+        for (Product p : productList) {
+            if (p.getPrice() > maxPrice) {
+                maxProduct = p;
+                maxPrice = p.getPrice();
+            }
+        }
+        return maxProduct;
+    }
 }
